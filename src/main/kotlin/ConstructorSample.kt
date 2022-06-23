@@ -1,0 +1,1 @@
+class ConstructorSample(var fname: String, var lname: String, var sid: String)

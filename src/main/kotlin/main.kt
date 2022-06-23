@@ -6,11 +6,27 @@ import java.lang.StringBuilder
 import kotlin.jvm.JvmStatic
 import kotlin.jvm.Throws
 
+//Extensions to Child & Parent
+open class Parent
+class Child : Parent()
+
+fun Parent.foo() = "parent"
+fun Child.foo() = "child"
+
+
 class main {
 
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
+
+            val parent: Parent = Child()
+            val child: Child = Child()
+
+            println(parent.foo())
+            println(child.foo())
+
+            println(StringUtilKt.Pair("Faiz", "Rehman"))
 
             val kotlin_object = Kotlin_Object("testing", "kotlin", 12)
             println("User Fname: " + kotlin_object.fname)
@@ -160,12 +176,65 @@ class main {
             }
 
 
-            val list = listOf("a","b","c")
+            val list = listOf("a", "b", "c")
 
 
+            // Extension Function with joinToString
+            println(listOf("a", "b", "c").joinToString("", "", ""))
+//        fun <T> Iterable<T>.joinToString():String
+
+
+            println('a'.isLetter())
+            println('%'.isLetterOrDigit())
+
+            //Formatting Multiline String
+            val q = """To code,
+                #or not to code?..""".trimMargin(marginPrefix = "#")
+
+            println(q)
+
+            val reges = """\d{2}\.d{2}\.\d{4}""".toRegex()
+            reges.matches("15.02.2016")
+            reges.matches("15.02.16")
+
+
+
+            println(mix(Color.YELLOW, Color.RED))
+
+            val s: String?
+            //   val length: Int = if (s != null) s.length else 0
+
+            //  val length: Int = s?.length ?: 0
+
+            val a1: Int? = null
+            val b1: Int? = 1
+            val c1: Int = 2
+
+            val s1 = (a1 ?: 0) + c1 //2
+            val s2 = (b1 ?: 0) + c1 //3
+            print("$s1$s2")
+
+//            isFoo1(null)
+//            isFoo2(null)
+//            isFoo3(null)
+//            isFoo4(null)
+
+            val x: Int? = 1
+            val y: Int = 2
+            val sum = x ?: 0 + y
+            println(sum)
 
         }
 
+//        fun isFoo1(n: Name) = n.value == "foo"
+//        fun isFoo2(n: Name?) = n.value == "foo"
+//        fun isFoo3(n: Name?) = n != null && n.value == "foo"
+//        fun isFoo4(n: Name?) = n?.value == "foo"
+
+
+        fun ss(asd: String): String {
+            return ""
+        }
 
 
         @Throws(IOException::class)
@@ -261,7 +330,7 @@ class main {
         fun mix(c1: Color, c2: Color) =
             when (setOf(c1, c2)) {
                 setOf(Color.RED, Color.YELLOW) -> Color.ORANGE
-                setOf(Color.RED, Color.YELLOW) -> Color.ORANGE
+                setOf(Color.YELLOW, Color.RED) -> Color.BLUE
 
                 else -> throw Exception("Dirty Color")
             }
