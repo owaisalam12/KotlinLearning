@@ -8,8 +8,8 @@ public class mainJava {
        // main.Companion.sum(1,2,4);
         try {
             main.Companion.foo1();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException error) {
+            error.printStackTrace();
         }
 
         StringUtilKt.repeat();

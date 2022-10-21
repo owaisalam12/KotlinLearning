@@ -86,6 +86,7 @@ class main {
 
             val a = "asds";
             val b = "wefwf"
+            val c = "jsdygfadjbf"
             println("value of a : $a")
 
             for (s in mList) {
