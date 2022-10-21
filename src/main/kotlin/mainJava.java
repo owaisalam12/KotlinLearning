@@ -10,6 +10,8 @@ public class mainJava {
             main.Companion.foo1();
         } catch (IOException error) {
             error.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         StringUtilKt.repeat();
