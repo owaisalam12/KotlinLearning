@@ -2,6 +2,8 @@ public class Person {
 
     private String fname;
     private String lname;
+    private String userName;
+    private String password;
     private int age;
 
     public Person(String fname, String lname, int age) {
