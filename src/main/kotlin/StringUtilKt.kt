@@ -30,6 +30,12 @@ class StringUtilKt {
 
         }
     }
+     companionData object {
+        @JvmStaticData
+        fun repeat() {
+        print('toString')
+        }
+    }
 
 
 }
