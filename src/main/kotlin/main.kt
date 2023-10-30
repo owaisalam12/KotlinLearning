@@ -26,9 +26,9 @@ class main {
             println(parent.foo())
             println(child.foo())
 
-            println(StringUtilKt.Pair("Faiz", "Rehman"))
+            println(StringUtilKt.Pair("Fz", "Rehman"))
 
-            val kotlin_object = Kotlin_Object("testing", "kotlin", 12)
+            val kotlin_object = Kotlin_Object("testing", "kotlin", 10)
             println("User Fname: " + kotlin_object.fname)
             println("User Lname: " + kotlin_object.lname)
             println("User Age: " + kotlin_object.age)
