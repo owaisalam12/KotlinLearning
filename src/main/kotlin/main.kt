@@ -28,7 +28,7 @@ class main {
 
             println(StringUtilKt.Pair("Faiz", "Rehman"))
 
-            val kotlin_object = Kotlin_Object("testing", "kotlin", 12)
+            val kotlin_object = Kotlin_Object("testing", "kotlin", 11)
             println("User Fname: " + kotlin_object.fname)
             println("User Lname: " + kotlin_object.lname)
             println("User Age: " + kotlin_object.age)
