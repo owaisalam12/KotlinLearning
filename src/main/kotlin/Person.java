@@ -9,6 +9,7 @@ public class Person {
     public Person(String fname, String lname, int age) {
         this.fname = fname;
         this.lname = lname;
+        this.lname = "Gender";
         this.age = age;
 
     }
