@@ -46,7 +46,7 @@ class main {
             mutableList.add("faiz")
             mutableList.add("sami")
             mutableList.add("wajid")
-
+            mutableList.add("owaisalam")
             for (s in mutableList) {
                 println("name is : $s")
             }
@@ -87,6 +87,7 @@ class main {
             val a = "asds";
             val b = "wefwf"
             val c = "jsdygfadjbf"
+            val d = "hanna"
             println("value of a : $a")
 
             for (s in mList) {
